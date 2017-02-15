@@ -4,6 +4,7 @@ from django.views import View
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from models import fitdata
+import json
 
 # Create your views here.
 
@@ -23,6 +24,7 @@ class dataTrack(View):
     def post(self, request):
         try:
             data = request.body
+            data = json.loads(data)
         except:
             return HttpResponse("Error Processing Data", status=500)
         
