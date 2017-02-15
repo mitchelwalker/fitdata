@@ -17,8 +17,7 @@ def home(request):
 
 @login_required
 def dashboard(request):
-    if request.user.is_authenticated():
-        username = request.user.username
+    username = request.user.username
     user = User.objects.get(username=username)
     return HttpResponse('Hello %s!' % user.first_name)
 
