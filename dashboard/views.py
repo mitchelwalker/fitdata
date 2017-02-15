@@ -21,7 +21,7 @@ class dataTrack(View):
     def dispatch(self, request, *args, **kwargs):
         return super(dataTrack, self).dispatch(request, *args, **kwargs)
     
-    def get(self, request):
+    def get(self, request, username):
         return HttpResponse('Method Not Supported', status=405)
 
     def post(self, request, username):
