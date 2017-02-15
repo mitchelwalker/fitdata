@@ -4,6 +4,7 @@ from django.views import View
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from models import fitdata
+from datetime import date
 import json
 
 # Create your views here.
@@ -33,7 +34,7 @@ class dataTrack(View):
                 date = data['date']
                 steps = data['steps']
                 distance = data['distance']
-                q1 = fitdata(distance=distance, steps=steps, date=date)
+                q1 = fitdata(distance=distance, steps=steps, date=date.today())
                 q1.save()
                 return HttpResponse(status=200)
             else:
