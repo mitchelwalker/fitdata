@@ -8,11 +8,12 @@ from django.db import models
 
 class fitdata(models.Model):
     user = models.ForeignKey(User, unique=True)
-    date = models.DateField(default=None)
+    date = models.DateField(auto_now_add=True)
     steps = models.IntegerField()
     distance = models.IntegerField()
 
 class weightdata(models.Model):
     user = models.ForeignKey(User, unique=True)
+    date = models.DateField(auto_now_add=True)
     weight = models.IntegerField()
     fat = models.IntegerField()
