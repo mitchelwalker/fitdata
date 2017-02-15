@@ -19,7 +19,7 @@ class dataTrack(View):
     
     def get(self, request):
         return HttpResponse('Method Not Supported', status=405)
-        
+
     def post(self, request):
         try:
             data = request.body
@@ -36,5 +36,5 @@ class dataTrack(View):
                 return HttpResponse(status=200)
             else:
                 return HttpResponse(status=500)
-        except:
-            return HttpResponse("Error adding data to DB", status=500)
+        except Exception as e:
+            return HttpResponse("Error adding data to DB. Error: %s " % e, status=500)

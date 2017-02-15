@@ -26,7 +26,7 @@ SECRET_KEY = 'f84e-x6e$m@isl0jho75srd+61g0j#me40n6bf^jhzz&&z=187'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['fitdata-th3gre3k.c9users.io']
+ALLOWED_HOSTS = ['fitness.mitchcodes.com']
 
 
 # Application definition
@@ -45,7 +45,6 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
