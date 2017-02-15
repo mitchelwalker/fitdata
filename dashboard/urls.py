@@ -4,5 +4,5 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.dashboard, name="dash"),
-    url(r'^data/', views.dataTrack.as_view(), name="data")
+    url(r'^data/(?P<username>\w+)', views.dataTrack.as_view(), name="data")
 ]

@@ -12,6 +12,8 @@ import json
 
 def dashboard(request):
     return HttpResponse('Hello')
+
+
     
 class dataTrack(View):
     
@@ -22,7 +24,7 @@ class dataTrack(View):
     def get(self, request):
         return HttpResponse('Method Not Supported', status=405)
 
-    def post(self, request):
+    def post(self, request, username):
         try:
             data = request.body
             data = json.loads(data)
@@ -34,7 +36,7 @@ class dataTrack(View):
                 date = data['date']
                 steps = data['steps']
                 distance = data['distance']
-                q1 = fitdata(distance=distance, steps=steps, date=date.today())
+                q1 = fitdata(user=username, distance=distance, steps=steps, date=date.today())
                 q1.save()
                 return HttpResponse(status=200)
             else:
