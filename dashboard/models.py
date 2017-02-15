@@ -16,4 +16,3 @@ class weightdata(models.Model):
     user = models.ForeignKey(User, unique=True)
     date = models.DateField(auto_now_add=True)
     weight = models.IntegerField()
-    fat = models.IntegerField()
