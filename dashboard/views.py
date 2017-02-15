@@ -33,7 +33,6 @@ class dataTrack(View):
         
         try:
             if len(data) != 0:
-                date = data['date']
                 steps = data['steps']
                 distance = data['distance']
                 q1 = fitdata(user=username, distance=distance, steps=steps)
