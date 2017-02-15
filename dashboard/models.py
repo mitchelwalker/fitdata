@@ -13,6 +13,6 @@ class fitdata(models.Model):
     distance = models.IntegerField()
 
 class weightdata(models.Model):
-    user = models.ForeignKey(User, unique=True
+    user = models.ForeignKey(User, unique=True)
     weight = models.IntegerField()
     fat = models.IntegerField()
