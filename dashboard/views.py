@@ -36,7 +36,7 @@ class dataTrack(View):
                 date = data['date']
                 steps = data['steps']
                 distance = data['distance']
-                q1 = fitdata(user=username, distance=distance, steps=steps, date=date.today())
+                q1 = fitdata(user=username, distance=distance, steps=steps)
                 q1.save()
                 return HttpResponse(status=200)
             else:
