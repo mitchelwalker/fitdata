@@ -5,7 +5,6 @@ from django.db import models
 
 # Create your models here.
 
-class user
 
 class fitdata(models.Model):
     user = models.ForeignKey(User, unique=True)
