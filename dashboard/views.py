@@ -19,8 +19,8 @@ def home(request):
 def dashboard(request):
     if request.user.is_authenticated():
         username = request.user.username
-    name = User.objects.filter(username=username).values('first_name')
-    return HttpResponse('Hello %s!' % name)
+    user = User.objects.get(username=username)
+    return HttpResponse('Hello %s!' % user.first_name)
 
 
     
